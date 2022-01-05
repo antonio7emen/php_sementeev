@@ -4,7 +4,7 @@
 <head> <title> Сведения о популярных операционных системах </title> </head>
 <body>
 <?php
- mysql_connect("localhost", "root") or die ("Невозможно
+ mysql_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba") or die ("Невозможно
 подключиться к серверу"); // установление соединения с сервером
  mysql_query('SET NAMES cp1251'); // тип кодировки
  // подключение к базе данных:
