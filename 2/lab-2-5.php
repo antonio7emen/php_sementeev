@@ -7,10 +7,10 @@
   if ($u >= 0 && $t >= 0) {
    return $u;
   }
-  elseif ($u < 0 && t >= 0) {
+  elseif ($u < 0 && $t >= 0) {
    return $t;
   }
-  elseif ($u >= 0 && t < 0) {
+  elseif ($u >= 0 && $t < 0) {
    return $u - 2 * $t;
   }
   else {
