@@ -5,11 +5,11 @@
 <body>
 <?php
  echo 1;
- mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba") or die ("Невозможно подключиться к серверу"); // установление соединения с сервером
+ mysql_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba") or die ("Невозможно подключиться к серверу"); // установление соединения с сервером
  echo 2;
- mysqli_query('SET NAMES cp1251'); // тип кодировки
+ mysql_query('SET NAMES cp1251'); // тип кодировки
  echo 3;
- mysqli_select_db("heroku_3e0e4fe3001638d") or die("Нет такой таблицы!");
+ mysql_select_db("heroku_3e0e4fe3001638d") or die("Нет такой таблицы!");
  echo 4;
 echo "<h2>Операционные системы:</h2>";
 ?>
@@ -20,8 +20,8 @@ echo "<h2>Операционные системы:</h2>";
  <th> Разрядность </th> <th> Разработчик </th> <th> Пользователей, млн. </th>
  <th> Редактировать </th> <th> Уничтожить </th> </tr>
 <?php
-$result=mysqli_query("SELECT * FROM os"); // запрос на выборку сведений о пользователях
-while ($row=mysqli_fetch_array($result)){// для каждой строки из запроса
+$result=mysql_query("SELECT * FROM os"); // запрос на выборку сведений о пользователях
+while ($row=mysql_fetch_array($result)){// для каждой строки из запроса
  echo "<tr>";
  echo "<td>" . $row["id"] . "</td>";
  echo "<td>" . $row["name"] . "</td>";
@@ -36,7 +36,7 @@ while ($row=mysqli_fetch_array($result)){// для каждой строки из запроса
  echo "</tr>";
 }
 echo "</table>";
-$num_rows = mysqli_num_rows($result); // число записей в таблице БД
+$num_rows = mysql_num_rows($result); // число записей в таблице БД
 print("<P>Всего записей: $num_rows </p>");
 ?>
 <p> <a href="new_os.php"> Добавить запись </a>
@@ -48,8 +48,8 @@ print("<P>Всего записей: $num_rows </p>");
  <th> Название </th> <th> URL </th>
  <th> Редактировать </th> <th> Уничтожить </th> </tr>
 <?php
-$result=mysqli_query("SELECT * FROM ds");
-while ($row=mysqli_fetch_array($result)){// для каждой строки из запроса
+$result=mysql_query("SELECT * FROM ds");
+while ($row=mysql_fetch_array($result)){// для каждой строки из запроса
  echo "<tr>";
  echo "<td>" . $row["id"] . "</td>";
  echo "<td>" . $row["name"] . "</td>";
@@ -61,7 +61,7 @@ while ($row=mysqli_fetch_array($result)){// для каждой строки из запроса
  echo "</tr>";
 }
 echo "</table>";
-$num_rows = mysqli_num_rows($result); // число записей в таблице БД
+$num_rows = mysql_num_rows($result); // число записей в таблице БД
 print("<P>Всего записей: $num_rows </p>");
 ?>
 <p> <a href="new_ds.php"> Добавить запись </a>
@@ -74,8 +74,8 @@ print("<P>Всего записей: $num_rows </p>");
  <th> id ОС </th> <th> id Цифрового магазина </th> 
  <th> Стоимость, $ </th> <th> Ключ </th> </tr>
 <?php
-$result=mysqli_query("SELECT * FROM dk");
-while ($row=mysqli_fetch_array($result)){// для каждой строки из запроса
+$result=mysql_query("SELECT * FROM dk");
+while ($row=mysql_fetch_array($result)){// для каждой строки из запроса
  echo "<tr>";
  echo "<td>" . $row["id"] . "</td>";
  echo "<td>" . $row["date_in"] . "</td>";
@@ -91,7 +91,7 @@ while ($row=mysqli_fetch_array($result)){// для каждой строки из запроса
  echo "</tr>";
 }
 echo "</table>";
-$num_rows = mysqli_num_rows($result); // число записей в таблице БД
+$num_rows = mysql_num_rows($result); // число записей в таблице БД
 print("<P>Всего записей: $num_rows </p>");
 ?>
 <p> <a href="new_dk.php"> Добавить запись </a>
