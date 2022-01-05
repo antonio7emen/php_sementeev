@@ -4,6 +4,7 @@
 <head> <title> —ведени€ о попул€рных операционных системах </title> </head>
 <body>
 <?php
+ echo 1;
  mysql_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba") or die ("Ќевозможно
 подключитьс€ к серверу"); // установление соединени€ с сервером
  mysql_query('SET NAMES cp1251'); // тип кодировки
