@@ -1,20 +1,20 @@
 <HTML><BODY>
-<h1>Сементеев А. А.</h1>
-<h1>Вариант №23</h1>
+<h1>РЎРµРјРµРЅС‚РµРµРІ Рђ. Рђ.</h1>
+<h1>Р’Р°СЂРёР°РЅС‚ в„–23</h1>
 <FORM method="post" action="<?php print $PHP_SELF ?>"> 
-Введите текст:<br><textarea type="text" name="w" rows="5" cols="40"></textarea><br><br>
-<INPUT type="submit" name="obr" value="Отправить">
+Р’РІРµРґРёС‚Рµ С‚РµРєСЃС‚:<br><textarea type="text" name="w" rows="5" cols="40"></textarea><br><br>
+<INPUT type="submit" name="obr" value="РћС‚РїСЂР°РІРёС‚СЊ">
 </FORM>
 </BODY></HTML>
 <?
  if(isset($_POST["obr"])) {
   $w = $_POST["w"];
-  $w = str_replace("<i>", "<курсив>", $w);
-  $w = str_replace("<I>", "<курсив>", $w);
-  $w = str_replace("</i>", "<конец курсива>", $w);
-  $w = str_replace("</I>", "<конец курсива>", $w);
+  $w = str_replace("<i>", "<РєСѓСЂСЃРёРІ>", $w);
+  $w = str_replace("<I>", "<РєСѓСЂСЃРёРІ>", $w);
+  $w = str_replace("</i>", "<РєРѕРЅРµС† РєСѓСЂСЃРёРІР°>", $w);
+  $w = str_replace("</I>", "<РєРѕРЅРµС† РєСѓСЂСЃРёРІР°>", $w);
   echo $w;
  }
 ?>
 
-<br><a href='.'>Назад</a><br>
+<br><a href='.'>РќР°Р·Р°Рґ</a><br>

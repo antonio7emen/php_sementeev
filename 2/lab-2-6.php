@@ -1,13 +1,13 @@
 <HTML>
-<h1>Сементеев А. А.</h1>
-<h2>Задание 2-6</h2>
+<h1>РЎРµРјРµРЅС‚РµРµРІ Рђ. Рђ.</h1>
+<h2>Р—Р°РґР°РЅРёРµ 2-6</h2>
 <BODY>
 <TABLE border=1>
 <?php
  $m = rand(1, 10);
  $n = rand(1, 10);
 
- echo "Матрица A размером " . $m . "x" . $n;
+ echo "РњР°С‚СЂРёС†Р° A СЂР°Р·РјРµСЂРѕРј " . $m . "x" . $n;
  for ($i = 0; $i < $m; $i++) {
   echo "<tr>";
   for ($j = 0; $j < $m; $j++) {
@@ -21,13 +21,13 @@
  }
  
  array_unshift($arr, null);
- $arr = call_user_func_array("array_map", $arr); //Транспонирование матрицы
+ $arr = call_user_func_array("array_map", $arr); //РўСЂР°РЅСЃРїРѕРЅРёСЂРѕРІР°РЅРёРµ РјР°С‚СЂРёС†С‹
 ?>
 
 </TABLE>
 <TABLE border=1>
 <?php
- echo "<br>Вектор B";
+ echo "<br>Р’РµРєС‚РѕСЂ B";
  for ($i = 0; $i < $m; $i++) {
   $s = 0;
   for ($j = 0; $j < $m; $j++) {
@@ -39,6 +39,6 @@
 
 </TABLE>
 
-<br><a href='.'>Назад</a><br>
+<br><a href='.'>РќР°Р·Р°Рґ</a><br>
 </BODY>
 </HTML>

@@ -1,17 +1,17 @@
-<h1>Сементеев А. А.</h1>
+<h1>РЎРµРјРµРЅС‚РµРµРІ Рђ. Рђ.</h1>
 <?
 if ($_POST["d"]=="plus") {
  $c=$_POST["a"]+$_POST["b"];
  if ($_POST["f"].checked==checked) {
  echo ($_POST['a']."+".$_POST['b']."=".$c);
- } else { echo ("Результат = ".$c); }
+ } else { echo ("Р РµР·СѓР»СЊС‚Р°С‚ = ".$c); }
 } else {
  $c=$_POST["a"]*$_POST["b"];
  if (isset($_POST["f"])) {
- echo ("Результат = ".$c);
+ echo ("Р РµР·СѓР»СЊС‚Р°С‚ = ".$c);
  } else {
  echo ($_POST['a']."*".$_POST['b']." = ".$c); }}
-echo ("<BR> <A href='f4.html'> Вернуться назад </A>");
+echo ("<BR> <A href='f4.html'> Р’РµСЂРЅСѓС‚СЊСЃСЏ РЅР°Р·Р°Рґ </A>");
 ?>
 
-<br><a href='.'>Назад</a><br>
+<br><a href='.'>РќР°Р·Р°Рґ</a><br>

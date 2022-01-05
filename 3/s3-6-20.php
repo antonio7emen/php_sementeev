@@ -1,9 +1,9 @@
 <HTML><BODY>
-<h1>Сементеев А. А.</h1>
-<h1>Вариант №20</h1>
+<h1>РЎРµРјРµРЅС‚РµРµРІ Рђ. Рђ.</h1>
+<h1>Р’Р°СЂРёР°РЅС‚ в„–20</h1>
 <FORM method="post" action="<?php print $PHP_SELF ?>"> 
-Введите слово: <INPUT type="text" name="w" size="20"><br><br>
-<INPUT type="submit" name="obr" value="Отправить">
+Р’РІРµРґРёС‚Рµ СЃР»РѕРІРѕ: <INPUT type="text" name="w" size="20"><br><br>
+<INPUT type="submit" name="obr" value="РћС‚РїСЂР°РІРёС‚СЊ">
 </FORM>
 </BODY></HTML>
 <?
@@ -15,4 +15,4 @@
  }
 ?>
 
-<br><a href='.'>Назад</a><br>
+<br><a href='.'>РќР°Р·Р°Рґ</a><br>

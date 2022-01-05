@@ -1,9 +1,9 @@
-<h1>Сементеев А. А.</h1>
+<h1>РЎРµРјРµРЅС‚РµРµРІ Рђ. Рђ.</h1>
 <?php
- echo ("Здравствуйте, " . $_POST["userName_post"]);
+ echo ("Р—РґСЂР°РІСЃС‚РІСѓР№С‚Рµ, " . $_POST["userName_post"]);
  echo ("<hr>");
- echo ("Значение скрытого поля hideField_post равно " .
+ echo ("Р—РЅР°С‡РµРЅРёРµ СЃРєСЂС‹С‚РѕРіРѕ РїРѕР»СЏ hideField_post СЂР°РІРЅРѕ " .
 $_POST["hideField_post"]);
 ?>
 
-<br><a href='.'>Назад</a><br>
+<br><a href='.'>РќР°Р·Р°Рґ</a><br>

@@ -1,14 +1,14 @@
 <HTML><BODY>
-<h1>Сементеев А. А.</h1>
+<h1>РЎРµРјРµРЅС‚РµРµРІ Рђ. Рђ.</h1>
 <FORM method="post" action="<?php print $PHP_SELF ?>"> 
-Найти делители числа <INPUT type="text" name="d" size="3"><br>
-Какие делители выводить из диапазона? <SELECT NAME="z" SIZE="1">
- <OPTION VALUE="1" SELECTED> Четные
- <OPTION VALUE="2"> Нечетные
- <OPTION VALUE="3"> Простые
- <OPTION VALUE="4"> Составные
+РќР°Р№С‚Рё РґРµР»РёС‚РµР»Рё С‡РёСЃР»Р° <INPUT type="text" name="d" size="3"><br>
+РљР°РєРёРµ РґРµР»РёС‚РµР»Рё РІС‹РІРѕРґРёС‚СЊ РёР· РґРёР°РїР°Р·РѕРЅР°? <SELECT NAME="z" SIZE="1">
+ <OPTION VALUE="1" SELECTED> Р§РµС‚РЅС‹Рµ
+ <OPTION VALUE="2"> РќРµС‡РµС‚РЅС‹Рµ
+ <OPTION VALUE="3"> РџСЂРѕСЃС‚С‹Рµ
+ <OPTION VALUE="4"> РЎРѕСЃС‚Р°РІРЅС‹Рµ
  </SELECT><br>
-<INPUT type="submit" name="obr" value="Вперед!">
+<INPUT type="submit" name="obr" value="Р’РїРµСЂРµРґ!">
 </FORM>
 </BODY> </HTML>
 <?
@@ -56,4 +56,4 @@
  }
 ?>
 
-<br><a href='.'>Назад</a><br>
+<br><a href='.'>РќР°Р·Р°Рґ</a><br>

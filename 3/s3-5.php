@@ -1,50 +1,50 @@
 <HTML><BODY>
-<h1>Сементеев А. А.</h1>
-<h1>Анкета "Ваш характер"</h1>
+<h1>РЎРµРјРµРЅС‚РµРµРІ Рђ. Рђ.</h1>
+<h1>РђРЅРєРµС‚Р° "Р’Р°С€ С…Р°СЂР°РєС‚РµСЂ"</h1>
 <FORM method="post" action="<?php print $PHP_SELF ?>"> 
-<br><br>Введите Ваше имя<br><br><INPUT type="text" name="l" size="20"><br><br>
+<br><br>Р’РІРµРґРёС‚Рµ Р’Р°С€Рµ РёРјСЏ<br><br><INPUT type="text" name="l" size="20"><br><br>
 
-1. Считаете ли Вы, что у многих ваших знакомых хороший характер?<br><br>
-Да <INPUT type="radio" name="q1" value="1" checked>   Нет <INPUT type="radio" name="q1" value="2"><br><br>
-2. Раздражают ли Вас мелкие повседневные обязанности?<br><br>
-Да <INPUT type="radio" name="q2" value="3" checked>   Нет <INPUT type="radio" name="q2" value="4"><br><br>
-3. Верите ли Вы, что ваши друзья преданы Вам?<br><br>
-Да <INPUT type="radio" name="q3" value="5" checked>   Нет <INPUT type="radio" name="q3" value="6"><br><br>
-4. Неприятно ли Вам, когда незнакомый человек делает Вам замечание?<br><br>
-Да <INPUT type="radio" name="q4" value="7" checked>   Нет <INPUT type="radio" name="q4" value="8"><br><br>
-5. Способны ли Вы ударить собаку или кошку?<br><br>
-Да <INPUT type="radio" name="q5" value="9" checked>   Нет <INPUT type="radio" name="q5" value="10"><br><br>
-6. Часто ли Вы принимаете лекарства?<br><br>
-Да <INPUT type="radio" name="q6" value="11" checked>   Нет <INPUT type="radio" name="q6" value="12"><br><br>
-7. Часто ли Вы меняете магазин, в который ходите за продуктами?<br><br>
-Да <INPUT type="radio" name="q7" value="13" checked>   Нет <INPUT type="radio" name="q7" value="14"><br><br>
-8. Продолжаете ли Вы отстаивать свою точку зрения, поняв, что ошиблись?<br><br>
-Да <INPUT type="radio" name="q8" value="15" checked>   Нет <INPUT type="radio" name="q8" value="16"><br><br>
-9. Тяготят ли Вас общественные обязанности?<br><br>
-Да <INPUT type="radio" name="q9" value="17" checked>   Нет <INPUT type="radio" name="q9" value="18"><br><br>
-10. Способны ли Вы ждать более 5 минут, не проявляя беспокойства?<br><br>
-Да <INPUT type="radio" name="q10" value="19" checked>   Нет <INPUT type="radio" name="q10" value="20"><br><br>
-11. Часто ли Вам приходят в голову мысли о Вашей невезучести?<br><br>
-Да <INPUT type="radio" name="q11" value="21" checked>   Нет <INPUT type="radio" name="q11" value="22"><br><br>
-12. Сохранилась ли у Вас фигура по сравнению с прошлым?<br><br>
-Да <INPUT type="radio" name="q12" value="23" checked>   Нет <INPUT type="radio" name="q12" value="24"><br><br>
-13. Можете ли Вы с улыбкой воспринимать подтрунивание друзей?<br><br>
-Да <INPUT type="radio" name="q13" value="25" checked>   Нет <INPUT type="radio" name="q13" value="26"><br><br>
-14. Нравится ли Вам семейная жизнь?<br><br>
-Да <INPUT type="radio" name="q14" value="27" checked>   Нет <INPUT type="radio" name="q14" value="28"><br><br>
-15. Злопамятны ли Вы?<br><br>
-Да <INPUT type="radio" name="q15" value="29" checked>   Нет <INPUT type="radio" name="q15" value="30"><br><br>
-16. Находите ли Вы, что стоит погода, типичная для данного времени года?<br><br>
-Да <INPUT type="radio" name="q16" value="31" checked>   Нет <INPUT type="radio" name="q16" value="32"><br><br>
-17. Случается ли Вам с утра быть в плохом настроении?<br><br>
-Да <INPUT type="radio" name="q17" value="33" checked>   Нет <INPUT type="radio" name="q17" value="34"><br><br>
-18. Раздражает ли Вас современная живопись?<br><br>
-Да <INPUT type="radio" name="q18" value="35" checked>   Нет <INPUT type="radio" name="q18" value="36"><br><br>
-19. Надоедает ли Вам присутствие чужих детей в доме более одного часа?<br><br>
-Да <INPUT type="radio" name="q19" value="37" checked>   Нет <INPUT type="radio" name="q19" value="38"><br><br>
-20. Надоедает ли Вам делать лабораторные по PHP?<br><br>
-Да <INPUT type="radio" name="q20" value="39" checked>   Нет <INPUT type="radio" name="q20" value="40"><br><br>
-<INPUT type="submit" name="obr" value="Отправить">
+1. РЎС‡РёС‚Р°РµС‚Рµ Р»Рё Р’С‹, С‡С‚Рѕ Сѓ РјРЅРѕРіРёС… РІР°С€РёС… Р·РЅР°РєРѕРјС‹С… С…РѕСЂРѕС€РёР№ С…Р°СЂР°РєС‚РµСЂ?<br><br>
+Р”Р° <INPUT type="radio" name="q1" value="1" checked>   РќРµС‚ <INPUT type="radio" name="q1" value="2"><br><br>
+2. Р Р°Р·РґСЂР°Р¶Р°СЋС‚ Р»Рё Р’Р°СЃ РјРµР»РєРёРµ РїРѕРІСЃРµРґРЅРµРІРЅС‹Рµ РѕР±СЏР·Р°РЅРЅРѕСЃС‚Рё?<br><br>
+Р”Р° <INPUT type="radio" name="q2" value="3" checked>   РќРµС‚ <INPUT type="radio" name="q2" value="4"><br><br>
+3. Р’РµСЂРёС‚Рµ Р»Рё Р’С‹, С‡С‚Рѕ РІР°С€Рё РґСЂСѓР·СЊСЏ РїСЂРµРґР°РЅС‹ Р’Р°Рј?<br><br>
+Р”Р° <INPUT type="radio" name="q3" value="5" checked>   РќРµС‚ <INPUT type="radio" name="q3" value="6"><br><br>
+4. РќРµРїСЂРёСЏС‚РЅРѕ Р»Рё Р’Р°Рј, РєРѕРіРґР° РЅРµР·РЅР°РєРѕРјС‹Р№ С‡РµР»РѕРІРµРє РґРµР»Р°РµС‚ Р’Р°Рј Р·Р°РјРµС‡Р°РЅРёРµ?<br><br>
+Р”Р° <INPUT type="radio" name="q4" value="7" checked>   РќРµС‚ <INPUT type="radio" name="q4" value="8"><br><br>
+5. РЎРїРѕСЃРѕР±РЅС‹ Р»Рё Р’С‹ СѓРґР°СЂРёС‚СЊ СЃРѕР±Р°РєСѓ РёР»Рё РєРѕС€РєСѓ?<br><br>
+Р”Р° <INPUT type="radio" name="q5" value="9" checked>   РќРµС‚ <INPUT type="radio" name="q5" value="10"><br><br>
+6. Р§Р°СЃС‚Рѕ Р»Рё Р’С‹ РїСЂРёРЅРёРјР°РµС‚Рµ Р»РµРєР°СЂСЃС‚РІР°?<br><br>
+Р”Р° <INPUT type="radio" name="q6" value="11" checked>   РќРµС‚ <INPUT type="radio" name="q6" value="12"><br><br>
+7. Р§Р°СЃС‚Рѕ Р»Рё Р’С‹ РјРµРЅСЏРµС‚Рµ РјР°РіР°Р·РёРЅ, РІ РєРѕС‚РѕСЂС‹Р№ С…РѕРґРёС‚Рµ Р·Р° РїСЂРѕРґСѓРєС‚Р°РјРё?<br><br>
+Р”Р° <INPUT type="radio" name="q7" value="13" checked>   РќРµС‚ <INPUT type="radio" name="q7" value="14"><br><br>
+8. РџСЂРѕРґРѕР»Р¶Р°РµС‚Рµ Р»Рё Р’С‹ РѕС‚СЃС‚Р°РёРІР°С‚СЊ СЃРІРѕСЋ С‚РѕС‡РєСѓ Р·СЂРµРЅРёСЏ, РїРѕРЅСЏРІ, С‡С‚Рѕ РѕС€РёР±Р»РёСЃСЊ?<br><br>
+Р”Р° <INPUT type="radio" name="q8" value="15" checked>   РќРµС‚ <INPUT type="radio" name="q8" value="16"><br><br>
+9. РўСЏРіРѕС‚СЏС‚ Р»Рё Р’Р°СЃ РѕР±С‰РµСЃС‚РІРµРЅРЅС‹Рµ РѕР±СЏР·Р°РЅРЅРѕСЃС‚Рё?<br><br>
+Р”Р° <INPUT type="radio" name="q9" value="17" checked>   РќРµС‚ <INPUT type="radio" name="q9" value="18"><br><br>
+10. РЎРїРѕСЃРѕР±РЅС‹ Р»Рё Р’С‹ Р¶РґР°С‚СЊ Р±РѕР»РµРµ 5 РјРёРЅСѓС‚, РЅРµ РїСЂРѕСЏРІР»СЏСЏ Р±РµСЃРїРѕРєРѕР№СЃС‚РІР°?<br><br>
+Р”Р° <INPUT type="radio" name="q10" value="19" checked>   РќРµС‚ <INPUT type="radio" name="q10" value="20"><br><br>
+11. Р§Р°СЃС‚Рѕ Р»Рё Р’Р°Рј РїСЂРёС…РѕРґСЏС‚ РІ РіРѕР»РѕРІСѓ РјС‹СЃР»Рё Рѕ Р’Р°С€РµР№ РЅРµРІРµР·СѓС‡РµСЃС‚Рё?<br><br>
+Р”Р° <INPUT type="radio" name="q11" value="21" checked>   РќРµС‚ <INPUT type="radio" name="q11" value="22"><br><br>
+12. РЎРѕС…СЂР°РЅРёР»Р°СЃСЊ Р»Рё Сѓ Р’Р°СЃ С„РёРіСѓСЂР° РїРѕ СЃСЂР°РІРЅРµРЅРёСЋ СЃ РїСЂРѕС€Р»С‹Рј?<br><br>
+Р”Р° <INPUT type="radio" name="q12" value="23" checked>   РќРµС‚ <INPUT type="radio" name="q12" value="24"><br><br>
+13. РњРѕР¶РµС‚Рµ Р»Рё Р’С‹ СЃ СѓР»С‹Р±РєРѕР№ РІРѕСЃРїСЂРёРЅРёРјР°С‚СЊ РїРѕРґС‚СЂСѓРЅРёРІР°РЅРёРµ РґСЂСѓР·РµР№?<br><br>
+Р”Р° <INPUT type="radio" name="q13" value="25" checked>   РќРµС‚ <INPUT type="radio" name="q13" value="26"><br><br>
+14. РќСЂР°РІРёС‚СЃСЏ Р»Рё Р’Р°Рј СЃРµРјРµР№РЅР°СЏ Р¶РёР·РЅСЊ?<br><br>
+Р”Р° <INPUT type="radio" name="q14" value="27" checked>   РќРµС‚ <INPUT type="radio" name="q14" value="28"><br><br>
+15. Р—Р»РѕРїР°РјСЏС‚РЅС‹ Р»Рё Р’С‹?<br><br>
+Р”Р° <INPUT type="radio" name="q15" value="29" checked>   РќРµС‚ <INPUT type="radio" name="q15" value="30"><br><br>
+16. РќР°С…РѕРґРёС‚Рµ Р»Рё Р’С‹, С‡С‚Рѕ СЃС‚РѕРёС‚ РїРѕРіРѕРґР°, С‚РёРїРёС‡РЅР°СЏ РґР»СЏ РґР°РЅРЅРѕРіРѕ РІСЂРµРјРµРЅРё РіРѕРґР°?<br><br>
+Р”Р° <INPUT type="radio" name="q16" value="31" checked>   РќРµС‚ <INPUT type="radio" name="q16" value="32"><br><br>
+17. РЎР»СѓС‡Р°РµС‚СЃСЏ Р»Рё Р’Р°Рј СЃ СѓС‚СЂР° Р±С‹С‚СЊ РІ РїР»РѕС…РѕРј РЅР°СЃС‚СЂРѕРµРЅРёРё?<br><br>
+Р”Р° <INPUT type="radio" name="q17" value="33" checked>   РќРµС‚ <INPUT type="radio" name="q17" value="34"><br><br>
+18. Р Р°Р·РґСЂР°Р¶Р°РµС‚ Р»Рё Р’Р°СЃ СЃРѕРІСЂРµРјРµРЅРЅР°СЏ Р¶РёРІРѕРїРёСЃСЊ?<br><br>
+Р”Р° <INPUT type="radio" name="q18" value="35" checked>   РќРµС‚ <INPUT type="radio" name="q18" value="36"><br><br>
+19. РќР°РґРѕРµРґР°РµС‚ Р»Рё Р’Р°Рј РїСЂРёСЃСѓС‚СЃС‚РІРёРµ С‡СѓР¶РёС… РґРµС‚РµР№ РІ РґРѕРјРµ Р±РѕР»РµРµ РѕРґРЅРѕРіРѕ С‡Р°СЃР°?<br><br>
+Р”Р° <INPUT type="radio" name="q19" value="37" checked>   РќРµС‚ <INPUT type="radio" name="q19" value="38"><br><br>
+20. РќР°РґРѕРµРґР°РµС‚ Р»Рё Р’Р°Рј РґРµР»Р°С‚СЊ Р»Р°Р±РѕСЂР°С‚РѕСЂРЅС‹Рµ РїРѕ PHP?<br><br>
+Р”Р° <INPUT type="radio" name="q20" value="39" checked>   РќРµС‚ <INPUT type="radio" name="q20" value="40"><br><br>
+<INPUT type="submit" name="obr" value="РћС‚РїСЂР°РІРёС‚СЊ">
 </FORM>
 </BODY></HTML>
 <?
@@ -60,10 +60,10 @@
    }
   }
   echo $_POST["l"] . "<br>";
-  if($res > 15) echo "У Вас покладистый характер";
-  elseif($res >= 8 && $res <= 15) echo "«Вы не лишены недостатков, но с вами можно ладить";
-  else echo "Вашим друзьям можно посочувствовать";
+  if($res > 15) echo "РЈ Р’Р°СЃ РїРѕРєР»Р°РґРёСЃС‚С‹Р№ С…Р°СЂР°РєС‚РµСЂ";
+  elseif($res >= 8 && $res <= 15) echo "В«Р’С‹ РЅРµ Р»РёС€РµРЅС‹ РЅРµРґРѕСЃС‚Р°С‚РєРѕРІ, РЅРѕ СЃ РІР°РјРё РјРѕР¶РЅРѕ Р»Р°РґРёС‚СЊ";
+  else echo "Р’Р°С€РёРј РґСЂСѓР·СЊСЏРј РјРѕР¶РЅРѕ РїРѕСЃРѕС‡СѓРІСЃС‚РІРѕРІР°С‚СЊ";
  }
 ?>
 
-<br><a href='.'>Назад</a><br>
+<br><a href='.'>РќР°Р·Р°Рґ</a><br>
