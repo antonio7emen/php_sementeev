@@ -23,6 +23,6 @@
 
  echo "a = " . $a . "<br>" . "b = " . $b . "<br>";
  echo "z = " . func($a - $b * $b, $b - $a) + func($a, $b - $a * $a);
-?>
 
-<br><a href='.'>Назад</a><br>
+ echo "<br><a href='.'>Назад</a><br>";
+?>
