@@ -2,7 +2,7 @@
 
 <html><body>
 <?php
- $conn = mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba", "heroku_3e0e4fe3001638d") or die ("РќРµРІРѕР·РјРѕР¶РЅРѕ РїРѕРґРєР»СЋС‡РёС‚СЊСЃСЏ Рє СЃРµСЂРІРµСЂСѓ");
+ $conn = mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba", "heroku_3e0e4fe3001638d") or die ("Невозможно подключиться к серверу");
  mysqli_query($conn, 'SET NAMES cp1251');
  $zapros="UPDATE user SET user_name='".$_GET['name'].
 "', user_login='".$_GET['login']."', user_password='"
@@ -11,9 +11,9 @@
 .$_GET['id'];
  mysqli_query($conn, $zapros);
 if (mysqli_affected_rows($conn)>0) {
- echo 'Р’СЃРµ СЃРѕС…СЂР°РЅРµРЅРѕ. <a href="index.php"> Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє СЃРїРёСЃРєСѓ
-РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ </a>'; }
- else { echo 'РћС€РёР±РєР° СЃРѕС…СЂР°РЅРµРЅРёСЏ. <a href="index.php">
-Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє СЃРїРёСЃРєСѓ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№</a> '; }
+ echo 'Все сохранено. <a href="index.php"> Вернуться к списку
+пользователей </a>'; }
+ else { echo 'Ошибка сохранения. <a href="index.php">
+Вернуться к списку пользователей</a> '; }
 ?>
 </body></html>

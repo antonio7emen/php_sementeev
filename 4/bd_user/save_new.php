@@ -1,19 +1,19 @@
 <?php header('Content-Type: text/html; charset=windows-1251'); ?>
 
 <?php
- // РџРѕРґРєР»СЋС‡РµРЅРёРµ Рє Р±Р°Р·Рµ РґР°РЅРЅС‹С…:
- $conn = mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba", "heroku_3e0e4fe3001638d") or die ("РќРµРІРѕР·РјРѕР¶РЅРѕ РїРѕРґРєР»СЋС‡РёС‚СЊСЃСЏ Рє СЃРµСЂРІРµСЂСѓ");
- mysqli_query($conn, 'SET NAMES cp1251'); // РўРёРї РєРѕРґРёСЂРѕРІРєРё
- // РЎС‚СЂРѕРєР° Р·Р°РїСЂРѕСЃР° РЅР° РґРѕР±Р°РІР»РµРЅРёРµ Р·Р°РїРёСЃРё РІ С‚Р°Р±Р»РёС†Сѓ:
+ // Подключение к базе данных:
+ $conn = mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba", "heroku_3e0e4fe3001638d") or die ("Невозможно подключиться к серверу");
+ mysqli_query($conn, 'SET NAMES cp1251'); // Тип кодировки
+ // Строка запроса на добавление записи в таблицу:
  $sql_add = "INSERT INTO user SET user_name='" . $_GET['name']
 ."', user_login='".$_GET['login']."', user_password='"
 .$_GET['password']."', user_e_mail='".$_GET['e_mail'].
 "', user_info='".$_GET['info']. "'";
- mysqli_query($conn, $sql_add); // Р’С‹РїРѕР»РЅРµРЅРёРµ Р·Р°РїСЂРѕСЃР°
- if (mysqli_affected_rows($conn)>0) // РµСЃР»Рё РЅРµС‚ РѕС€РёР±РѕРє РїСЂРё РІС‹РїРѕР»РЅРµРЅРёРё Р·Р°РїСЂРѕСЃР°
- { print "<p>РЎРїР°СЃРёР±Рѕ, РІС‹ Р·Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅС‹ РІ Р±Р°Р·Рµ РґР°РЅРЅС‹С….";
- print "<p><a href=\"index.php\"> Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє СЃРїРёСЃРєСѓ
-РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ </a>"; }
- else { print "РћС€РёР±РєР° СЃРѕС…СЂР°РЅРµРЅРёСЏ. <a href=\"index.php\">
-Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє СЃРїРёСЃРєСѓ РєРЅРёРі </a>"; }
+ mysqli_query($conn, $sql_add); // Выполнение запроса
+ if (mysqli_affected_rows($conn)>0) // если нет ошибок при выполнении запроса
+ { print "<p>Спасибо, вы зарегистрированы в базе данных.";
+ print "<p><a href=\"index.php\"> Вернуться к списку
+пользователей </a>"; }
+ else { print "Ошибка сохранения. <a href=\"index.php\">
+Вернуться к списку книг </a>"; }
 ?>

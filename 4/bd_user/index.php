@@ -1,33 +1,33 @@
 <?php header('Content-Type: text/html; charset=windows-1251'); ?>
 
 <html>
-<head> <title> РЎРІРµРґРµРЅРёСЏ Рѕ РїСЂРѕР»СЊР·РѕРІР°С‚РµР»СЏС… СЃР°Р№С‚Р° </title> </head>
+<head> <title> Сведения о прользователях сайта </title> </head>
 <body>
 <?php
- $conn = mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba", "heroku_3e0e4fe3001638d") or die ("РќРµРІРѕР·РјРѕР¶РЅРѕ РїРѕРґРєР»СЋС‡РёС‚СЊСЃСЏ Рє СЃРµСЂРІРµСЂСѓ");
- mysqli_query($conn, 'SET NAMES cp1251'); // С‚РёРї РєРѕРґРёСЂРѕРІРєРё
+ $conn = mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba", "heroku_3e0e4fe3001638d") or die ("Невозможно подключиться к серверу");
+ mysqli_query($conn, 'SET NAMES cp1251'); // тип кодировки
 ?>
-<h2>Р—Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅРЅС‹Рµ РїРѕР»СЊР·РѕРІР°С‚РµР»Рё:</h2>
+<h2>Зарегистрированные пользователи:</h2>
 <table border="1">
-<tr> // РІС‹РІРѕРґ В«С€Р°РїРєРёВ» С‚Р°Р±Р»РёС†С‹
- <th> РРјСЏ </th> <th> E-mail </th>
- <th> Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ </th> <th> РЈРЅРёС‡С‚РѕР¶РёС‚СЊ </th> </tr>
+<tr> // вывод «шапки» таблицы
+ <th> Имя </th> <th> E-mail </th>
+ <th> Редактировать </th> <th> Уничтожить </th> </tr>
 <?php
 $result=mysqli_query($conn, "SELECT id_user, user_name, user_e_mail
-FROM user"); // Р·Р°РїСЂРѕСЃ РЅР° РІС‹Р±РѕСЂРєСѓ СЃРІРµРґРµРЅРёР№ Рѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏС…
-while ($row=mysqli_fetch_array($result)){// РґР»СЏ РєР°Р¶РґРѕР№ СЃС‚СЂРѕРєРё РёР· Р·Р°РїСЂРѕСЃР°
+FROM user"); // запрос на выборку сведений о пользователях
+while ($row=mysqli_fetch_array($result)){// для каждой строки из запроса
  echo "<tr>";
  echo "<td>" . $row['user_name'] . "</td>";
  echo "<td>" . $row['user_e_mail'] . "</td>";
  echo "<td><a href='edit.php?id_user=" . $row['id_user']
-. "'>Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ</a></td>"; // Р·Р°РїСѓСЃРє СЃРєСЂРёРїС‚Р° РґР»СЏ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ
+. "'>Редактировать</a></td>"; // запуск скрипта для редактирования
  echo "<td><a href='delete.php?id_user=" . $row['id_user']
-. "'>РЈРґР°Р»РёС‚СЊ</a></td>"; // Р·Р°РїСѓСЃРє СЃРєСЂРёРїС‚Р° РґР»СЏ СѓРґР°Р»РµРЅРёСЏ Р·Р°РїРёСЃРё
+. "'>Удалить</a></td>"; // запуск скрипта для удаления записи
  echo "</tr>";
 }
 print "</table>";
-$num_rows = mysqli_num_rows($result); // С‡РёСЃР»Рѕ Р·Р°РїРёСЃРµР№ РІ С‚Р°Р±Р»РёС†Рµ Р‘Р”
-print("<P>Р’СЃРµРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№: $num_rows </p>");
+$num_rows = mysqli_num_rows($result); // число записей в таблице БД
+print("<P>Всего пользователей: $num_rows </p>");
 ?>
-<p> <a href="new.php"> Р”РѕР±Р°РІРёС‚СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ </a>
+<p> <a href="new.php"> Добавить пользователя </a>
 </body> </html>

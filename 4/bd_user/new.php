@@ -1,20 +1,20 @@
 <?php header('Content-Type: text/html; charset=windows-1251'); ?>
 
 <html>
-<head> <title> Р”РѕР±Р°РІР»РµРЅРёРµ РЅРѕРІРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ </title> </head>
+<head> <title> Добавление нового пользователя </title> </head>
 <body>
-<H2>Р РµРіРёСЃС‚СЂР°С†РёСЏ РЅР° СЃР°Р№С‚Рµ:</H2>
+<H2>Регистрация на сайте:</H2>
 <form action="save_new.php" metod="get">
- РРјСЏ: <input name="name" size="50" type="text">
-<br>Р›РѕРіРёРЅ: <input name="login" size="20" type="text">
-<br>РџР°СЂРѕР»СЊ: <input name="password" size="20" type="password">
-<br>Р•-mail: <input name="e_mail" size="30" type="text">
-<br>РРЅС„РѕСЂРјР°С†РёСЏ: <textarea name="info" rows="4" cols="40">
+ Имя: <input name="name" size="50" type="text">
+<br>Логин: <input name="login" size="20" type="text">
+<br>Пароль: <input name="password" size="20" type="password">
+<br>Е-mail: <input name="e_mail" size="30" type="text">
+<br>Информация: <textarea name="info" rows="4" cols="40">
 </textarea>
-<p><input name="add" type="submit" value="Р”РѕР±Р°РІРёС‚СЊ">
-<input name="b2" type="reset" value="РћС‡РёСЃС‚РёС‚СЊ"></p>
+<p><input name="add" type="submit" value="Добавить">
+<input name="b2" type="reset" value="Очистить"></p>
 </form>
 <p>
-<a href="index.php"> Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє СЃРїРёСЃРєСѓ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ </a>
+<a href="index.php"> Вернуться к списку пользователей </a>
 </body>
 </html>

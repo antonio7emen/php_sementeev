@@ -2,11 +2,11 @@
 
 <html>
 <head
-<title> Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ РґР°РЅРЅС‹С… Рѕ РїРѕР»СЊР·РѕРІР°С‚РµР»Рµ </title>
+<title> Редактирование данных о пользователе </title>
 </head>
 <body>
 <?php
- $conn = mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba", "heroku_3e0e4fe3001638d") or die ("РќРµРІРѕР·РјРѕР¶РЅРѕ РїРѕРґРєР»СЋС‡РёС‚СЊСЃСЏ Рє СЃРµСЂРІРµСЂСѓ");
+ $conn = mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba", "heroku_3e0e4fe3001638d") or die ("Невозможно подключиться к серверу");
  mysqli_query($conn, 'SET NAMES cp1251');
  $rows=mysqli_query($conn, "SELECT user_name, user_login,
 user_password, user_e_mail, user_info FROM user WHERE
@@ -20,21 +20,21 @@ id_user=".$_GET['id_user']);
  $info = $st['user_info'];
  }
 print "<form action='save_edit.php' metod='get'>";
-print "РРјСЏ: <input name='name' size='50' type='text'
+print "Имя: <input name='name' size='50' type='text'
 value='".$name."'>";
-print "<br>Р›РѕРіРёРЅ: <input name='login' size='20' type='text'
+print "<br>Логин: <input name='login' size='20' type='text'
 value='".$login."'>";
-print "<br>РџР°СЂРѕР»СЊ: <input name='password' size='20' type='text'
+print "<br>Пароль: <input name='password' size='20' type='text'
 value='".$password."'>";
-print "<br>Р•-mail: <input name='e_mail' size='30' type='text'
+print "<br>Е-mail: <input name='e_mail' size='30' type='text'
 value='".$e_mail."'>";
-print "<br>РРЅС„РѕСЂРјР°С†РёСЏ: <textarea name='info' rows='4'
+print "<br>Информация: <textarea name='info' rows='4'
 cols='40'>".$info."</textarea>";
 print "<input type='hidden' name='id' value='".$id."'> <br>";
-print "<input type='submit' name='' value='РЎРѕС…СЂР°РЅРёС‚СЊ'>";
+print "<input type='submit' name='' value='Сохранить'>";
 print "</form>";
-print "<p><a href=\"index.php\"> Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє СЃРїРёСЃРєСѓ
-РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ </a>";
+print "<p><a href=\"index.php\"> Вернуться к списку
+пользователей </a>";
 ?>
 </body>
 </html>
