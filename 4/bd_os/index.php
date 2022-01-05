@@ -10,6 +10,7 @@
  mysql_query('SET NAMES cp1251'); // тип кодировки
  // подключение к базе данных:
  mysql_select_db("heroku_3e0e4fe3001638d") or die("Нет такой таблицы!");
+ echo 1;
 echo "<h2>Операционные системы:</h2>";
 ?>
 <table border="1">
