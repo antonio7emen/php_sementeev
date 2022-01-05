@@ -15,8 +15,8 @@
  <th> Разрядность </th> <th> Разработчик </th> <th> Пользователей, млн. </th>
  <th> Редактировать </th> <th> Уничтожить </th> </tr>
 <?php
-$result=mysqli_query("SELECT * FROM os"); // запрос на выборку сведений о пользователях
-while ($row=mysqli_fetch_array($result)){// для каждой строки из запроса
+$query=mysqli_query($conn, "SELECT * FROM os"); // запрос на выборку сведений о пользователях
+while ($row=mysqli_fetch_array($query)){// для каждой строки из запроса
  echo "<tr>";
  echo "<td>" . $row["id"] . "</td>";
  echo "<td>" . $row["name"] . "</td>";
