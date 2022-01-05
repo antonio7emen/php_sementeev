@@ -1,4 +1,4 @@
-<?php header('Content-Type: text/html; charset=windows-1251'); ?>
+<?php header('Content-Type: text/html; charset=windows-1251'); echo 1;?>
 
 <html>
 <head> <title> —ведени€ о попул€рных операционных системах </title> </head>
