@@ -1,6 +1,6 @@
 <?php header('Content-Type: text/html; charset=windows-1251'); ?>
 
-<h1>РЎРµРјРµРЅС‚РµРµРІ Рђ. Рђ.</h1>
+<h1>Сементеев А. А.</h1>
 <?
 if (isset($_POST["obr"])) {
  if($_POST["d1"] > $_POST["d2"]) {
@@ -10,9 +10,9 @@ if (isset($_POST["obr"])) {
   echo $_POST["d2"];
   }
  else {
-  echo "Р”РІР° С‡РёСЃР»Р° СЂР°РІРЅС‹";
+  echo "Два числа равны";
   }
  }
 ?>
 
-<br><a href='.'>РќР°Р·Р°Рґ</a><br>
+<br><a href='.'>Назад</a><br>
