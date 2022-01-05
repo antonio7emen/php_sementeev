@@ -1,5 +1,7 @@
-<h1>РЎРµРјРµРЅС‚РµРµРІ Рђ. Рђ.</h1>
-<h2>Р—Р°РґР°РЅРёРµ 2-1</h2>
+<?php header('Content-Type: text/html; charset=windows-1251'); ?>
+
+<h1>Сементеев А. А.</h1>
+<h2>Задание 2-1</h2>
 
 <?php
  echo "1) \$treug[] = ";
@@ -23,14 +25,14 @@
  }
  echo "<br>";
 
- echo "4) \$rez[] (РћС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№) = ";
+ echo "4) \$rez[] (Отсортированный) = ";
  sort($rez);
  for ($i = 0; $i <= count($rez); $i++) {
   echo $rez[$i] . " ";
  }
  echo "<br>";
  
- echo "5) \$rez[] (Р‘РµР· \$rez[0]) = ";
+ echo "5) \$rez[] (Без \$rez[0]) = ";
  unset($rez[0]);
  for ($i = 0; $i <= count($rez); $i++) {
   echo $rez[$i] . " ";
@@ -45,4 +47,4 @@
  echo "<br>";
 ?>
 
-<br><a href='.'>РќР°Р·Р°Рґ</a><br>
+<br><a href='.'>Назад</a><br>

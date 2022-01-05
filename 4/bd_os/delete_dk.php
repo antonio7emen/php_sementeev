@@ -1,3 +1,5 @@
+<?php header('Content-Type: text/html; charset=windows-1251'); ?>
+
 <?php
  mysql_connect("localhost","root","") or die ("Невозможно
 подключиться к серверу");

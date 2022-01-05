@@ -1,5 +1,7 @@
-<h1>РЎРµРјРµРЅС‚РµРµРІ Рђ. Рђ.</h1>
-<h2>Р—Р°РґР°РЅРёРµ 2-4</h2>
+<?php header('Content-Type: text/html; charset=windows-1251'); ?>
+
+<h1>Сементеев А. А.</h1>
+<h2>Задание 2-4</h2>
 <?php
  $len = rand(10, 30);
  for ($i = 0; $i < $len; $i++) {
@@ -38,4 +40,4 @@
  echo $max;
 ?>
 
-<br><a href='.'>РќР°Р·Р°Рґ</a><br>
+<br><a href='.'>Назад</a><br>

@@ -1,9 +1,11 @@
-<h1>РЎРµРјРµРЅС‚РµРµРІ Рђ. Рђ.</h1>
+<?php header('Content-Type: text/html; charset=windows-1251'); ?>
+
+<h1>Сементеев А. А.</h1>
 <?php
- echo ("Р—РґСЂР°РІСЃС‚РІСѓР№С‚Рµ, " . $_POST["userName_post"]);
+ echo ("Здравствуйте, " . $_POST["userName_post"]);
  echo ("<hr>");
- echo ("Р—РЅР°С‡РµРЅРёРµ СЃРєСЂС‹С‚РѕРіРѕ РїРѕР»СЏ hideField_post СЂР°РІРЅРѕ " .
+ echo ("Значение скрытого поля hideField_post равно " .
 $_POST["hideField_post"]);
 ?>
 
-<br><a href='.'>РќР°Р·Р°Рґ</a><br>
+<br><a href='.'>Назад</a><br>

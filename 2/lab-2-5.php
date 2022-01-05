@@ -1,5 +1,7 @@
-<h1>РЎРµРјРµРЅС‚РµРµРІ Рђ. Рђ.</h1>
-<h2>Р—Р°РґР°РЅРёРµ 2-5</h2>
+<?php header('Content-Type: text/html; charset=windows-1251'); ?>
+
+<h1>Сементеев А. А.</h1>
+<h2>Задание 2-5</h2>
 <?php
  function func($u, $t) {
   if ($u >= 0 && $t >= 0) {
@@ -23,4 +25,4 @@
  echo "z = " . func($a - $b * $b, $b - $a) + func($a, $b - $a * $a);
 ?>
 
-<br><a href='.'>РќР°Р·Р°Рґ</a><br>
+<br><a href='.'>Назад</a><br>

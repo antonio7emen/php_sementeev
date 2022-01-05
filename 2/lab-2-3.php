@@ -1,8 +1,10 @@
-<h1>РЎРµРјРµРЅС‚РµРµРІ Рђ. Рђ.</h1>
-<h2>Р—Р°РґР°РЅРёРµ 2-3</h2>
+<?php header('Content-Type: text/html; charset=windows-1251'); ?>
+
+<h1>Сементеев А. А.</h1>
+<h2>Задание 2-3</h2>
 
 <?php
- echo "1) РђСЃСЃРѕС†РёР°С‚РёРІРЅС‹Р№ РјР°СЃСЃРёРІ<br>";
+ echo "1) Ассоциативный массив<br>";
  $cust = array(
   "cnum" => 2001,
   "cname" => "Hoffman",
@@ -14,28 +16,28 @@
  }
  echo "<br>";
  
- echo "2) Р”РѕР±Р°РІР»РµРЅРёРµ РЅРѕРІРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ<br>";
+ echo "2) Добавление нового значения<br>";
  $cust["raiting"] = 100;
  foreach($cust as $key => $value) {
   echo $key . " = " . $value . "<br>";
  }
  echo "<br>";
  
- echo "3) РЎРѕСЂС‚РёСЂРѕРІРєР° РїРѕ Р·РЅР°С‡РµРЅРёСЏРј<br>";
+ echo "3) Сортировка по значениям<br>";
  asort($cust);
  foreach($cust as $key => $value) {
   echo $key . " = " . $value . "<br>";
  }
  echo "<br>";
  
- echo "4) РЎРѕСЂРёС‚СЂРѕРІРєР° РїРѕ РєР»СЋС‡Р°Рј<br>";
+ echo "4) Соритровка по ключам<br>";
  ksort($cust);
  foreach($cust as $key => $value) {
   echo $key . " = " . $value . "<br>";
  }
  echo "<br>";
 
- echo "4) РЎРѕСЂРёСЂРѕРІРєР° С„СѓРЅРєС†РёРµР№ Sort()<br>";
+ echo "4) Сорировка функцией Sort()<br>";
  sort($cust);
  foreach($cust as $key => $value) {
   echo $key . " = " . $value . "<br>";
@@ -43,4 +45,4 @@
  echo "<br>";
 ?>
 
-<br><a href='.'>РќР°Р·Р°Рґ</a><br>
+<br><a href='.'>Назад</a><br>

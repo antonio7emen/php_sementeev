@@ -1,15 +1,17 @@
+<?php header('Content-Type: text/html; charset=windows-1251'); ?>
+
 <HTML><BODY>
-<h1>РЎРµРјРµРЅС‚РµРµРІ Рђ. Рђ.</h1>
+<h1>Сементеев А. А.</h1>
 <FORM method="post" action="<?php print $PHP_SELF ?>">
 <INPUT type="text" name="d1" size="3"> 
 <INPUT type="text" name="d2" size="3"><br>
-Р”РµР№СЃС‚РІРёРµ: <SELECT NAME="z" SIZE="1">
- <OPTION VALUE="1" SELECTED> РЎР»РѕР¶РёС‚СЊ
- <OPTION VALUE="2"> Р’С‹С‡РµСЃС‚СЊ
- <OPTION VALUE="3"> РЈРјРЅРѕР¶РёС‚СЊ
- <OPTION VALUE="4"> Р Р°Р·РґРµР»РёС‚СЊ
+Действие: <SELECT NAME="z" SIZE="1">
+ <OPTION VALUE="1" SELECTED> Сложить
+ <OPTION VALUE="2"> Вычесть
+ <OPTION VALUE="3"> Умножить
+ <OPTION VALUE="4"> Разделить
  </SELECT><br>
-<INPUT type="submit" name="obr" value="Р’РїРµСЂРµРґ!">
+<INPUT type="submit" name="obr" value="Вперед!">
 </FORM>
 </BODY> </HTML>
 <?
@@ -30,8 +32,8 @@
    $s = $d1 / $d2;
    break;
   }
-  echo "РћС‚РІРµС‚: " . $s;
+  echo "Ответ: " . $s;
  }
 ?>
 
-<br><a href='.'>РќР°Р·Р°Рґ</a><br>
+<br><a href='.'>Назад</a><br>

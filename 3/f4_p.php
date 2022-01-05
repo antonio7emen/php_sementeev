@@ -1,17 +1,19 @@
-<h1>РЎРµРјРµРЅС‚РµРµРІ Рђ. Рђ.</h1>
+<?php header('Content-Type: text/html; charset=windows-1251'); ?>
+
+<h1>Сементеев А. А.</h1>
 <?
 if ($_POST["d"]=="plus") {
  $c=$_POST["a"]+$_POST["b"];
  if ($_POST["f"].checked==checked) {
  echo ($_POST['a']."+".$_POST['b']."=".$c);
- } else { echo ("Р РµР·СѓР»СЊС‚Р°С‚ = ".$c); }
+ } else { echo ("Результат = ".$c); }
 } else {
  $c=$_POST["a"]*$_POST["b"];
  if (isset($_POST["f"])) {
- echo ("Р РµР·СѓР»СЊС‚Р°С‚ = ".$c);
+ echo ("Результат = ".$c);
  } else {
  echo ($_POST['a']."*".$_POST['b']." = ".$c); }}
-echo ("<BR> <A href='f4.html'> Р’РµСЂРЅСѓС‚СЊСЃСЏ РЅР°Р·Р°Рґ </A>");
+echo ("<BR> <A href='f4.html'> Вернуться назад </A>");
 ?>
 
-<br><a href='.'>РќР°Р·Р°Рґ</a><br>
+<br><a href='.'>Назад</a><br>

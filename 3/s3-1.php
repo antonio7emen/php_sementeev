@@ -1,3 +1,5 @@
+<?php header('Content-Type: text/html; charset=windows-1251'); ?>
+
 <h1>Сементеев А. А.</h1>
 <?
 if (isset($_POST["obr"])) {

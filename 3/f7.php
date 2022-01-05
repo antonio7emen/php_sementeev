@@ -1,22 +1,24 @@
+<?php header('Content-Type: text/html; charset=windows-1251'); ?>
+
 <HTML>
-<HEAD> <TITLE> РЈРіР°РґР°Р№ С‡РёСЃР»Рѕ </TITLE> </HEAD>
+<HEAD> <TITLE> Угадай число </TITLE> </HEAD>
 <BODY>
-<h1>РЎРµРјРµРЅС‚РµРµРІ Рђ. Рђ.</h1>
+<h1>Сементеев А. А.</h1>
 <FORM method="post" action="<?php print $PHP_SELF ?>">
- Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ РѕС‚ 1 РґРѕ 10:
+ Введите число от 1 до 10:
  <INPUT type="text" name="a" size="3">
- <INPUT type="hidden" name="h" value="5"> // СѓРіР°РґС‹РІР°РµРјРѕРµ С‡РёСЃР»Рѕ
- <P> <INPUT type="submit" name="obr" value="РџСЂРѕРІРµСЂРёС‚СЊ">
+ <INPUT type="hidden" name="h" value="5"> // угадываемое число
+ <P> <INPUT type="submit" name="obr" value="Проверить">
 </FORM>
 <?
 if (isset($_POST["obr"])) {
-if ($_POST["a"]==$_POST["h"]) { echo($_POST["a"]." - РЈР“РђР”РђР›Р!");
+if ($_POST["a"]==$_POST["h"]) { echo($_POST["a"]." - УГАДАЛИ!");
  } else {
  if ($_POST["a"]>$_POST["h"]) {
- echo($_POST["a"]." - РњРќРћР“Рћ...");
- } else { echo($_POST["a"]." - РњРђР›Рћ..."); }
+ echo($_POST["a"]." - МНОГО...");
+ } else { echo($_POST["a"]." - МАЛО..."); }
  } }
 ?>
 
-<br><a href='.'>РќР°Р·Р°Рґ</a><br>
+<br><a href='.'>Назад</a><br>
 </BODY> </HTML>

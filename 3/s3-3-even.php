@@ -1,3 +1,5 @@
+<?php header('Content-Type: text/html; charset=windows-1251'); ?>
+
 <HTML><BODY>
 <h1>Сементеев А. А.</h1>
 <FORM method="post" action="<?php print $PHP_SELF ?>"> 
