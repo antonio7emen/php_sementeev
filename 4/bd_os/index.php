@@ -3,16 +3,8 @@
 <html>
 <head> <title> Сведения о популярных операционных системах </title> </head>
 <body>
-<?php
- echo 1;
- mysql_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba") or die ("Невозможно подключиться к серверу"); // установление соединения с сервером
- echo 2;
- mysql_query('SET NAMES cp1251'); // тип кодировки
- echo 3;
- mysql_select_db("heroku_3e0e4fe3001638d") or die("Нет такой таблицы!");
- echo 4;
-echo "<h2>Операционные системы:</h2>";
-?>
+
+<h2>Операционные системы:</h2>
 <table border="1">
 <tr>
  <th> id </th>
