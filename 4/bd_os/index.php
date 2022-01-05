@@ -5,7 +5,7 @@
 <body>
 <?php
  $conn = mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba", "heroku_3e0e4fe3001638d") or die ("Невозможно подключиться к серверу");
- $query = mysqli_query($conn, "SET NAMES cp1251"); // тип кодировки
+ mysqli_query($conn, "SET NAMES cp1251"); // тип кодировки
 ?>
 <h2>Операционные системы:</h2>
 <table border="1">
@@ -15,8 +15,8 @@
  <th> Разрядность </th> <th> Разработчик </th> <th> Пользователей, млн. </th>
  <th> Редактировать </th> <th> Уничтожить </th> </tr>
 <?php
-$query=mysqli_query($conn, "SELECT * FROM os"); // запрос на выборку сведений о пользователях
-while ($row=mysqli_fetch_array($query)){// для каждой строки из запроса
+$result=mysqli_query($conn, "SELECT * FROM os"); // запрос на выборку сведений о пользователях
+while ($row=mysqli_fetch_array($result)){// для каждой строки из запроса
  echo "<tr>";
  echo "<td>" . $row["id"] . "</td>";
  echo "<td>" . $row["name"] . "</td>";
@@ -43,7 +43,7 @@ print("<P>Всего записей: $num_rows </p>");
  <th> Название </th> <th> URL </th>
  <th> Редактировать </th> <th> Уничтожить </th> </tr>
 <?php
-$result=mysqli_query("SELECT * FROM ds");
+$result=mysqli_query($conn, "SELECT * FROM ds");
 while ($row=mysqli_fetch_array($result)){// для каждой строки из запроса
  echo "<tr>";
  echo "<td>" . $row["id"] . "</td>";
@@ -69,7 +69,7 @@ print("<P>Всего записей: $num_rows </p>");
  <th> id ОС </th> <th> id Цифрового магазина </th> 
  <th> Стоимость, $ </th> <th> Ключ </th> </tr>
 <?php
-$result=mysqli_query("SELECT * FROM dk");
+$result=mysqli_query($conn, "SELECT * FROM dk");
 while ($row=mysqli_fetch_array($result)){// для каждой строки из запроса
  echo "<tr>";
  echo "<td>" . $row["id"] . "</td>";
