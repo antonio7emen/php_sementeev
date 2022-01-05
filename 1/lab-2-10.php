@@ -23,7 +23,7 @@ for ($i=0; $i<=9; $i++) {
  echo ("</tr>");
 }
 ?>
-<br><a href='.'>Назад</a><br>
 </TABLE>
+<br><a href='.'>Назад</a><br>
 </BODY>
 </HTML>
