@@ -1,3 +1,5 @@
+<?php header('Content-Type: text/html; charset=windows-1251'); ?>
+
 <html>
 <head> <title> Добавление новой записи </title> </head>
 <body>
