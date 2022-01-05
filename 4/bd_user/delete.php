@@ -1,7 +1,7 @@
 <?php
- mysql_connect("localhost","root","") or die ("Íåâîçìîæíî
-ïîäêëþ÷èòüñÿ ê ñåðâåðó");
- mysql_select_db("users") or die("Íåò òàêîé òàáëèöû!");
+ mysql_connect("localhost","root","") or die ("ÐÐµÐ²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾
+Ð¿Ð¾Ð´ÐºÐ»ÑŽÑ‡Ð¸Ñ‚ÑŒÑÑ Ðº ÑÐµÑ€Ð²ÐµÑ€Ñƒ");
+ mysql_select_db("users") or die("ÐÐµÑ‚ Ñ‚Ð°ÐºÐ¾Ð¹ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñ‹!");
  $zapros="DELETE FROM user WHERE id_user=" . $_GET['id_user'];
  mysql_query($zapros);
  header("Location: index.php");

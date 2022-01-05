@@ -1,9 +1,9 @@
 <html><body>
 <?php
- mysql_connect("localhost","root","") or die ("Невозможно
-подключиться к серверу");
+ mysql_connect("localhost","root","") or die ("РќРµРІРѕР·РјРѕР¶РЅРѕ
+РїРѕРґРєР»СЋС‡РёС‚СЊСЃСЏ Рє СЃРµСЂРІРµСЂСѓ");
  mysql_query('SET NAMES cp1251');
- mysql_select_db("users") or die("Нет такой таблицы!");
+ mysql_select_db("users") or die("РќРµС‚ С‚Р°РєРѕР№ С‚Р°Р±Р»РёС†С‹!");
  $zapros="UPDATE user SET user_name='".$_GET['name'].
 "', user_login='".$_GET['login']."', user_password='"
 .$_GET['password']."', user_e_mail='".$_GET['e_mail'].
@@ -11,9 +11,9 @@
 .$_GET['id'];
  mysql_query($zapros);
 if (mysql_affected_rows()>0) {
- echo 'Все сохранено. <a href="index.php"> Вернуться к списку
-пользователей </a>'; }
- else { echo 'Ошибка сохранения. <a href="index.php">
-Вернуться к списку пользователей</a> '; }
+ echo 'Р’СЃРµ СЃРѕС…СЂР°РЅРµРЅРѕ. <a href="index.php"> Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє СЃРїРёСЃРєСѓ
+РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ </a>'; }
+ else { echo 'РћС€РёР±РєР° СЃРѕС…СЂР°РЅРµРЅРёСЏ. <a href="index.php">
+Р’РµСЂРЅСѓС‚СЊСЃСЏ Рє СЃРїРёСЃРєСѓ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№</a> '; }
 ?>
 </body></html>
