@@ -8,7 +8,7 @@
  $sql_add = "INSERT INTO ds SET name='" . $_GET['name']
 ."', url='".$_GET['url'] . "'";
  mysqli_query($conn, $sql_add); // ¬ыполнение запроса
- if (mysqli_affected_rows()>0) // если нет ошибок при выполнении запроса
+ if (mysqli_affected_rows($conn)>0) // если нет ошибок при выполнении запроса
  { print "<p>«апись сохранена.";
  print "<p><a href=\"index.php\"> ¬ернутьс€ к списку
 пользователей </a>"; }

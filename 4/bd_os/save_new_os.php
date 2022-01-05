@@ -10,7 +10,7 @@
 .$_GET['bitness']."', developer='".$_GET['developer'].
 "', population='".$_GET['population']. "'";
  mysqli_query($conn, $sql_add); // Выполнение запроса
- if (mysqli_affected_rows()>0) // если нет ошибок при выполнении запроса
+ if (mysqli_affected_rows($conn)>0) // если нет ошибок при выполнении запроса
  { print "<p>Запись сохранена.";
  print "<p><a href=\"index.php\"> Вернуться </a>"; }
  else { print "Ошибка сохранения. <a href=\"index.php\">
