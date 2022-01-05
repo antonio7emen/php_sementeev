@@ -1,3 +1,5 @@
+<?php header('Content-Type: text/html; charset=windows-1251'); ?>
+
 <h1> Сементеев А. А. </h1>
 <h2> Задача 1-1<br>Вариант №20 (№5) </h2>
 

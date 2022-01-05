@@ -1,8 +1,10 @@
+<?php header('Content-Type: text/html; charset=windows-1251'); ?>
+
 <HTML>
-<TITLE> РўР°Р±Р»РёС†Р° СѓРјРЅРѕР¶РµРЅРёСЏ </TITLE>
+<TITLE> Таблица умножения </TITLE>
 <BODY>
-<h1> РЎРµРјРµРЅС‚РµРµРІ Рђ. Рђ. </h1>
-<h2> Р—Р°РґР°С‡Р° 1-2 </h2>
+<h1> Сементеев А. А. </h1>
+<h2> Задача 1-2 </h2>
 <TABLE border=1>
 <?php
 for ($i=0; $i<=9; $i++) {
@@ -21,7 +23,7 @@ for ($i=0; $i<=9; $i++) {
  echo ("</tr>");
 }
 ?>
-<br><a href='.'>РќР°Р·Р°Рґ</a><br>
+<br><a href='.'>Назад</a><br>
 </TABLE>
 </BODY>
 </HTML>
