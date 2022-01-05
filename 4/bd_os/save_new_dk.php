@@ -1,12 +1,10 @@
 <?php
  // Подключение к базе данных:
- mysql_connect("localhost","root","") or die ("Невозможно
-подключиться к серверу");
- mysql_query('SET NAMES cp1251'); // Тип кодировки
- mysql_select_db("os") or die("Нет такой таблицы!");
+ $conn = mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba", "heroku_3e0e4fe3001638d") or die ("Невозможно подключиться к серверу");
+ mysql_query($conn, 'SET NAMES cp1251'); // Тип кодировки
  // Строка запроса на добавление записи в таблицу:
  $sql_add = "INSERT INTO os.dk (`id`, `date_in`, `date_out`, `id_os`, `id_ds`, `price`, `key`) VALUES (NULL, '".$_GET["date_in"]."', '".$_GET["date_out"]."', '".$_GET["id_os"]."', '".$_GET["id_ds"]."', '".$_GET["price"]."', '".$_GET["key"]."')";
- mysql_query($sql_add); // Выполнение запроса
+ mysql_query($conn, $sql_add); // Выполнение запроса
  if (mysql_affected_rows()>0) // если нет ошибок при выполнении запроса
  { print "<p>Запись сохранена.";
  print "<p><a href=\"index.php\"> Вернуться на главную </a>"; }
