@@ -9,7 +9,7 @@
  $conn = mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba", "heroku_3e0e4fe3001638d") or die ("Невозможно подключиться к серверу");
  mysqli_query($conn, 'SET NAMES cp1251');
  $rows=mysqli_query($conn, "SELECT user_name, user_login,
-user_password, user_e_mail, user_info FROM users WHERE
+user_password, user_e_mail, user_info FROM user WHERE
 id_user=".$_GET['id_user']);
  while ($st = mysqli_fetch_array($rows)) {
  $id=$_GET['id_user'];

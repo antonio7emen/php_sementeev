@@ -14,7 +14,7 @@
  <th> Редактировать </th> <th> Уничтожить </th> </tr>
 <?php
 $result=mysqli_query($conn, "SELECT id_user, user_name, user_e_mail
-FROM users"); // запрос на выборку сведений о пользователях
+FROM user"); // запрос на выборку сведений о пользователях
 while ($row=mysqli_fetch_array($result)){// для каждой строки из запроса
  echo "<tr>";
  echo "<td>" . $row['user_name'] . "</td>";
