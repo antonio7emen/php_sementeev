@@ -15,5 +15,5 @@
 <a href='./lab-2-5.php'>Задание 2-5</a><br>
 <a href='./lab-2-6.php'>Задание 2-6</a><br>
 
-<br><a href='.'>Назад</a><br>
+<br><a href='..'>Назад</a><br>
 
