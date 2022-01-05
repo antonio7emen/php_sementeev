@@ -4,7 +4,8 @@
 <head> <title> Операционные системы </title> </head>
 <body>
 <?php
- mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba") or die ("Невозможно подключиться к серверу"); // установление соединения с сервером
+ mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba") or die ("Невозможно подключиться к серверу");
+ if(mysqli_connect_errno()) { echo "Ошибка!";}
  mysqli_query('SET NAMES cp1251'); // тип кодировки
  mysqli_select_db("heroku_3e0e4fe3001638d") or die("Нет такой таблицы!");
 ?>
