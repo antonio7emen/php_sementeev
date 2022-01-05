@@ -1,17 +1,17 @@
+<?php header('Content-Type: text/html; charset=windows-1251'); ?>
+
 <html>
 <head
 <title> Редактирование данных о пользователе </title>
 </head>
 <body>
 <?php
- mysql_connect("localhost","root","") or die ("Невозможно
-подключиться к серверу");
- mysql_query('SET NAMES cp1251');
- mysql_select_db("users") or die("Нет такой таблицы!");
- $rows=mysql_query("SELECT user_name, user_login,
+ $conn = mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba", "heroku_3e0e4fe3001638d") or die ("Невозможно подключиться к серверу");
+ mysqli_query($conn, 'SET NAMES cp1251');
+ $rows=mysqli_query($conn, "SELECT user_name, user_login,
 user_password, user_e_mail, user_info FROM user WHERE
 id_user=".$_GET['id_user']);
- while ($st = mysql_fetch_array($rows)) {
+ while ($st = mysqli_fetch_array($rows)) {
  $id=$_GET['id_user'];
  $name = $st['user_name'];
  $login = $st['user_login'];
