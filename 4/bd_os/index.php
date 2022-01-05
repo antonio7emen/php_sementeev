@@ -5,11 +5,11 @@
 <body>
 <?php
  echo 1;
- mysqlii_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba") or die ("Невозможно подключиться к серверу"); // установление соединения с сервером
+ mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba") or die ("Невозможно подключиться к серверу"); // установление соединения с сервером
  echo 2;
- mysqlii_query('SET NAMES cp1251'); // тип кодировки
+ mysqli_query('SET NAMES cp1251'); // тип кодировки
  echo 3;
- mysqlii_select_db("heroku_3e0e4fe3001638d") or die("Нет такой таблицы!");
+ mysqli_select_db("heroku_3e0e4fe3001638d") or die("Нет такой таблицы!");
  echo 4;
 echo "<h2>Операционные системы:</h2>";
 ?>
