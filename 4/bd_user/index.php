@@ -30,4 +30,6 @@ $num_rows = mysqli_num_rows($result); // число записей в таблице БД
 print("<P>Всего пользователей: $num_rows </p>");
 ?>
 <p> <a href="new.php"> Добавить пользователя </a>
+
+<br><a href='..'>Назад</a><br>
 </body> </html>

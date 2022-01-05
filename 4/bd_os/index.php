@@ -94,4 +94,6 @@ print("<P>Всего записей: $num_rows </p>");
 <p> <a href="gen_pdf.php"> Сохранить PDF </a>
 <p> <a href="gen_xls.php"> Сохранить Excel </a>
 
+<br><a href='..'>Назад</a><br>
+
 </body> </html>
