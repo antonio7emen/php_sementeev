@@ -1,78 +1,26 @@
 <?php
-  header("Expires: Mon, 1 Apr 1974 05:00:00 GMT");
-  header("Last-Modified: " . gmdate("D,d M YH:i:s") . " GMT");
-  header("Cache-Control: no-cache, must-revalidate");
-  header("Pragma: no-cache");
-  header("Content-type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
-  header("Content-Disposition: attachment; filename=sementeev_8.xls");
+  header('Content-Type: text/html; charset=windows-1251');
+  header("Content-Type: application/force-download");
+  header("Content-Type: application/octet-stream");
+  header("Content-Type: application/download");;
+  header("Content-Disposition: attachment;filename=sementeev_8.xls");
+  header("Content-Transfer-Encoding: binary ");
 
-  $conn = mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba", "heroku_3e0e4fe3001638d") or die ("ÐÐµÐ²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ Ð¿Ð¾Ð´ÐºÐ»ÑŽÑ‡Ð¸Ñ‚ÑŒÑÑ Ðº ÑÐµÑ€Ð²ÐµÑ€Ñƒ");
+  $conn = mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba", "heroku_3e0e4fe3001638d") or die ("Íåâîçìîæíî ïîäêëþ÷èòüñÿ ê ñåðâåðó");
   mysqli_query($conn, "SET NAMES cp1251");
 
-  require("PHPExcel/PHPExcel.php");
-  require("PHPExcel/PHPExcel/Writer/Excel2007.php");
-
-  $xls = new PHPExcel();
-  $xls->setActiveSheetIndex(0);
-  $sheet = $xls -> getActiveSheet();
-  $sheet->setTitle("Ð¡ÐµÐ¼ÐµÐ½Ñ‚ÐµÐµÐ²_8");
+  xlsBOF();
   
-  $sheet->getColumnDimension("B")->setWidth(5);
-  $sheet->getColumnDimension("C")->setWidth(15);
-  $sheet->getColumnDimension("D")->setWidth(30);
-  $sheet->getColumnDimension("E")->setWidth(15);
-  $sheet->getColumnDimension("F")->setWidth(30);
-  $sheet->getColumnDimension("G")->setWidth(20);
-  $sheet->getColumnDimension("H")->setWidth(20);
-  $sheet->getColumnDimension("I")->setWidth(20);
-  $sheet->getColumnDimension("J")->setWidth(20);
+  xlsWriteLabel(1, 1, "¹");
+  xlsWriteLabel(1, 2, "Íàçâàíèå");
+  xlsWriteLabel(1, 3, "Òèï îáîðóäîâàíèÿ");
+  xlsWriteLabel(1, 4, "Ðàçðÿäíîñòü");
+  xlsWriteLabel(1, 5, "Ðàçðàáîò÷èê");
+  xlsWriteLabel(1, 6, "Êîë-âî ïîëüçîâàòåëåé, ìëí.");
+  xlsWriteLabel(1, 7, "Öèôðîâîé êëþ÷");
+  xlsWriteLabel(1, 8, "Äàòà ïðèîáðåòåíèÿ");
+  xlsWriteLabel(1, 9, "Äàòà îêîí÷àíèÿ");
+  xlsWriteLabel(1, 10, "URL ìàãàçèíà");
 
-  $sheet->setCellValue("B2", "â„–");
-  $sheet->setCellValue("C2", "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ");
-  $sheet->setCellValue("D2", "Ð¢Ð¸Ð¿ Ð¾Ð±Ð¾Ñ€ÑƒÐ´Ð¾Ð²Ð°Ð½Ð¸Ñ");
-  $sheet->setCellValue("E2", "Ð Ð°Ð·Ñ€ÑÐ´Ð½Ð¾ÑÑ‚ÑŒ");
-  $sheet->setCellValue("F2", "ÐšÐ¾Ð»-Ð²Ð¾ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÐµÐ¹");
-  $sheet->setCellValue("G2", "Ð¦Ð¸Ñ„Ñ€Ð¾Ð²Ð¾Ð¹ ÐºÐ»ÑŽÑ‡");
-  $sheet->setCellValue("H2", "Ð”Ð°Ñ‚Ð° Ð¿Ñ€Ð¸Ð¾Ð±Ñ€ÐµÑ‚ÐµÐ½Ð¸Ñ");
-  $sheet->setCellValue("I2", "Ð”Ð°Ñ‚Ð° Ð¾ÐºÐ¾Ð½Ñ‡Ð°Ð½Ð¸Ñ");
-  $sheet->setCellValue("J2", "URL Ð¼Ð°Ð³Ð°Ð·Ð¸Ð½Ð°");
-  
-  $query = mysqli_query($conn, "SELECT * FROM dk");
-  for($i = 1; $fetch_dk = mysqli_fetch_array($query); $i++) {
-    $date_in = $fetch_dk["date_in"];
-    $date_out = $fetch_dk["date_out"];
-    $id_os = $fetch_dk["id_os"];
-    $id_ds = $fetch_dk["id_ds"];
-    $key = $fetch_dk["key"];
-   
-    $query_os = mysqli_query($conn, "SELECT * FROM os WHERE id = '" . $id_os . "'");
-    if($fetch_os = mysqli_fetch_array($query_os)) {
-      $name_os = $fetch_os["name"];
-      $equipment = $fetch_os["equipment"];
-      $bitness = $fetch_os["bitness"];
-      $developer = $fetch_os["developer"];
-      $population = $fetch_os["population"];
-    }
-
-    $query_dk = mysqli_query($conn, "SELECT * FROM ds WHERE id = '" . $id_ds . "'");
-    if($fetch_ds = mysqli_fetch_array($query_dk)) {
-      $name_ds = $fetch_ds["name"];
-      $url = $fetch_ds["url"];
-    }
-
-    $sheet->setCellValue("B".($i + 2), $i);
-    $sheet->setCellValue("C".($i + 2), $name_os);
-    $sheet->setCellValue("D".($i + 2), $bitness);
-    $sheet->setCellValue("E".($i + 2), $developer);
-    $sheet->setCellValue("F".($i + 2), $population);
-    $sheet->setCellValue("G".($i + 2), $key);
-    $sheet->setCellValue("H".($i + 2), $date_in);
-    $sheet->setCellValue("I".($i + 2), $date_out);
-    $sheet->setCellValue("J".($i + 2), $url);
-}
-
-$objWriter = new PHPExcel_Writer_Excel5($xls);
-$objWriter->save('php://output');
-  
-exit();
+  xlsEOF();
 ?>
