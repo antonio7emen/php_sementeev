@@ -1,11 +1,10 @@
 <?php
  session_start();
  if($_SESSION["type"] == 2) {
- mysql_connect("localhost","root","") or die ("Невозможно подключиться к серверу!");
- mysql_query('SET NAMES cp1251');
- mysql_select_db("os") or die("База данных отсутствует!");
-  $rows=mysql_query("SELECT username, type FROM users WHERE username='".$_GET['username']."'");
-  while ($st = mysql_fetch_array($rows)) {
+ $conn = mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba", "heroku_3e0e4fe3001638d") or die ("Невозможно подключиться к серверу");
+ mysqli_query($conn, 'SET NAMES cp1251');
+  $rows=mysqli_query($conn, "SELECT username, type FROM users WHERE username='".$_GET['username']."'");
+  while ($st = mysqli_fetch_array($rows)) {
    $username=$_GET["username"];
    $type = $st['type'];
   }

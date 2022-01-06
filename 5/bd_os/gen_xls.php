@@ -9,9 +9,8 @@
   header("Content-type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
   header("Content-Disposition: attachment; filename=sementeev_8.xls");
 
-  mysql_connect("localhost", "root") or die ("Невозможно подключиться к серверу");
-  mysql_query("SET NAMES cp1251");
-  mysql_select_db("os") or die("Нет такой таблицы!");
+  $conn = mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba", "heroku_3e0e4fe3001638d") or die ("Невозможно подключиться к серверу");
+  mysqli_query($conn, "SET NAMES cp1251");
 
   require("PHPExcel/PHPExcel.php");
   require("PHPExcel/PHPExcel/Writer/Excel2007.php");
@@ -41,16 +40,16 @@
   $sheet->setCellValue("I2", "Дата окончания");
   $sheet->setCellValue("J2", "URL магазина");
   
-  $query = mysql_query("SELECT * FROM dk");
-  for($i = 1; $fetch_dk = mysql_fetch_array($query); $i++) {
+  $query = mysqli_query($conn, "SELECT * FROM dk");
+  for($i = 1; $fetch_dk = mysqli_fetch_array($query); $i++) {
     $date_in = $fetch_dk["date_in"];
     $date_out = $fetch_dk["date_out"];
     $id_os = $fetch_dk["id_os"];
     $id_ds = $fetch_dk["id_ds"];
     $key = $fetch_dk["key"];
    
-    $query_os = mysql_query("SELECT * FROM os WHERE id = '" . $id_os . "'");
-    if($fetch_os = mysql_fetch_array($query_os)) {
+    $query_os = mysqli_query($conn, "SELECT * FROM os WHERE id = '" . $id_os . "'");
+    if($fetch_os = mysqli_fetch_array($query_os)) {
       $name_os = $fetch_os["name"];
       $equipment = $fetch_os["equipment"];
       $bitness = $fetch_os["bitness"];
@@ -58,8 +57,8 @@
       $population = $fetch_os["population"];
     }
 
-    $query_dk = mysql_query("SELECT * FROM ds WHERE id = '" . $id_ds . "'");
-    if($fetch_ds = mysql_fetch_array($query_dk)) {
+    $query_dk = mysqli_query($conn, "SELECT * FROM ds WHERE id = '" . $id_ds . "'");
+    if($fetch_ds = mysqli_fetch_array($query_dk)) {
       $name_ds = $fetch_ds["name"];
       $url = $fetch_ds["url"];
     }

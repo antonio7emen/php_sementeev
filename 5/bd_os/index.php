@@ -1,13 +1,12 @@
 <?php
  session_start(); //Инициализируем сессию
 
- mysql_connect("localhost", "root") or die ("Невозможно подключиться к серверу!"); //Подключаемся к базе данных
- mysql_query('SET NAMES cp1251');
- mysql_select_db("os") or die("База данных отсутствует!");
+ $conn = mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba", "heroku_3e0e4fe3001638d") or die ("Невозможно подключиться к серверу");
+ mysqli_query($conn, 'SET NAMES cp1251');
 
  if($_SERVER["REQUEST_METHOD"] == "POST") { //Если запрос был выполнен через форму(POST), то проверяем корректность имени пользователя и пароля
-  $query=mysql_query("SELECT username, type FROM users WHERE username='".$_POST["username"]."' AND password='".md5($_POST["password"])."'");
-  if($fetch = mysql_fetch_array($query)) { //Если имя пользователя и пароль есть в базе данных, то добавляем переменные сессии
+  $query=mysqli_query($conn, "SELECT username, type FROM users WHERE username='".$_POST["username"]."' AND password='".md5($_POST["password"])."'");
+  if($fetch = mysqli_fetch_array($query)) { //Если имя пользователя и пароль есть в базе данных, то добавляем переменные сессии
    $_SESSION["username"] = $fetch["username"];
    $_SESSION["type"] = $fetch["type"];
    $_SESSION["count"] = 0;
@@ -28,8 +27,8 @@
  }
 
  if($_SESSION["username"]) { //Если сессия активна, выводим интерфейс базы данных
-  $query=mysql_query("SELECT type FROM users WHERE username='" . $_SESSION["username"] . "'");
-  if($fetch = mysql_fetch_array($query)) $_SESSION["type"] = $fetch["type"];
+  $query=mysqli_query($conn, "SELECT type FROM users WHERE username='" . $_SESSION["username"] . "'");
+  if($fetch = mysqli_fetch_array($query)) $_SESSION["type"] = $fetch["type"];
 
   echo "<html><head><title>" . $_SESSION["username"] . "</title></head><body>"; //Меняем название вкладки на имя пользователя
   echo "<h2>Операционные системы:</h2>";
@@ -38,8 +37,8 @@
   echo "<th>Разработчик</th><th>Пользователей, млн.</th><th>Редактировать</th>";
   if($_SESSION["type"] == 2) echo "<th>Уничтожить</th>";
   echo "</tr>";
-  $query=mysql_query("SELECT * FROM os");
-  while($fetch=mysql_fetch_array($query)) {
+  $query=mysqli_query($conn, "SELECT * FROM os");
+  while($fetch=mysqli_fetch_array($query)) {
    echo "<tr><td>" . $fetch["id"] . "</td>";
    echo "<td>" . $fetch["name"] . "</td>";
    echo "<td>" . $fetch["equipment"] . "</td>";
@@ -51,7 +50,7 @@
    echo "</tr>";
   }
   echo "</table><br>";
-  $num_rows = mysql_num_rows($query);
+  $num_rows = mysqli_num_rows($query);
   echo "Всего записей: " . $num_rows . " ";
   echo "<a href='new_os.php'>Добавить запись</a>";
 
@@ -60,8 +59,8 @@
   echo "<tr><th>id</th><th>Название</th><th>URL</th><th>Редактировать</th>";
   if($_SESSION["type"] == 2) echo "<th>Уничтожить</th>";
   echo "</tr>";
-  $query=mysql_query("SELECT * FROM ds");
-  while($fetch=mysql_fetch_array($query)) {
+  $query=mysqli_query($conn, "SELECT * FROM ds");
+  while($fetch=mysqli_fetch_array($query)) {
    echo "<tr><td>" . $fetch["id"] . "</td>";
    echo "<td>" . $fetch["name"] . "</td>";
    echo "<td>" . $fetch["url"] . "</td>";
@@ -70,7 +69,7 @@
    echo "</tr>";
   }
   echo "</table><br>";
-  $num_rows = mysql_num_rows($query);
+  $num_rows = mysqli_num_rows($query);
   echo "Всего записей: " . $num_rows . " ";
   echo "<a href='new_ds.php'>Добавить запись</a>";
 
@@ -81,8 +80,8 @@
   echo "</th><th>Ключ</th><th>Редактировать</th>";
   if($_SESSION["type"] == 2) echo "<th>Уничтожить</th>";
   echo "</tr>";
-  $query=mysql_query("SELECT * FROM dk");
-  while($fetch=mysql_fetch_array($query)) {
+  $query=mysqli_query($conn, "SELECT * FROM dk");
+  while($fetch=mysqli_fetch_array($query)) {
    echo "<tr><td>" . $fetch["id"] . "</td>";
    echo "<td>" . $fetch["date_in"] . "</td>";
    echo "<td>" . $fetch["date_out"] . "</td>";
@@ -95,7 +94,7 @@
    echo "</tr>";
   }
   echo "</table><br>";
-  $num_rows = mysql_num_rows($query);
+  $num_rows = mysqli_num_rows($query);
   echo "Всего записей: " . $num_rows . " ";
   echo "<a href='new_dk.php'>Добавить запись</a>";
   
@@ -105,8 +104,8 @@
    echo "<table border='1'>";
    echo "<tr><th>Имя пользователя</th><th>Пароль</th><th>Права доступа</th>";
    echo "<th>Редактировать</th><th>Уничтожить</th></tr>";
-   $query=mysql_query("SELECT username, password, type FROM users");
-   while($fetch=mysql_fetch_array($query)) {
+   $query=mysqli_query($conn, "SELECT username, password, type FROM users");
+   while($fetch=mysqli_fetch_array($query)) {
     echo "<tr><td>" . $fetch["username"] . "</td>";
     echo "<td>" . $fetch["password"] . "</td>";
     echo "<td>" . $fetch["type"] . "</td>";
@@ -115,7 +114,7 @@
    }
    echo "</table><br>";
    
-   $num_rows = mysql_num_rows($query);
+   $num_rows = mysqli_num_rows($query);
    echo "Всего записей: " . $num_rows . " ";
    echo "<a href='new_users.php'>Добавить запись</a>";
   }

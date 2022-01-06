@@ -1,11 +1,9 @@
 <?php
  session_start();
  if($_SESSION["type"] == 2) {
- mysql_connect("localhost","root","") or die ("Невозможно
-подключиться к серверу");
- mysql_select_db("os") or die("Нет такой таблицы!");
+ $conn = mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba", "heroku_3e0e4fe3001638d") or die ("Невозможно подключиться к серверу");
  $zapros="DELETE FROM ds WHERE id=" . $_GET['id'];
- mysql_query($zapros);
+ mysqli_query($conn, $zapros);
  }
  header("Location: index.php");
  exit;

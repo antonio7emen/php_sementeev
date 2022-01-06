@@ -1,12 +1,11 @@
 <?php
  session_start();
  if($_SESSION["type"] == 2) { //Только администраторы
-  mysql_connect("localhost","root","") or die ("Невозможно подключиться к серверу!");
-  mysql_query('SET NAMES cp1251');
-  mysql_select_db("os") or die("База данных отсутствует!");
+  $conn = mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba", "heroku_3e0e4fe3001638d") or die ("Невозможно подключиться к серверу");
+  mysqli_query($conn, 'SET NAMES cp1251');
   $sql_add = "INSERT INTO users SET username='" . $_GET['username']."', password='".md5($_GET['password'])."', type='".$_GET['type']. "'";
-  mysql_query($sql_add);
-  if (mysql_affected_rows()>0) { // если нет ошибок при выполнении запроса
+  mysqli_query($conn, $sql_add);
+  if (mysqli_affected_rows($conn)>0) { // если нет ошибок при выполнении запроса
    echo "Запись сохранена.<br>";
    echo "<a href='.'>Вернуться на главную</a>";
   }
