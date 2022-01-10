@@ -6,6 +6,7 @@
 <p> Дата и время:
 <p>
 <?php
+        date_default_timezone_set("Asia/Yekaterinburg");
 	$d=date("d.m.Y H:i");
 	
 	echo($d);
