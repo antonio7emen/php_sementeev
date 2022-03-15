@@ -62,8 +62,8 @@
       $population = $fetch_os["population"];
     }
    
-    $query_dk = mysqli_query($conn, "SELECT * FROM ds WHERE id = '" . $id_ds . "'");
-    if($fetch_ds = mysqli_fetch_array($query_dk)) {
+    $query_ds = mysqli_query($conn, "SELECT * FROM ds WHERE id = '" . $id_ds . "'");
+    if($fetch_ds = mysqli_fetch_array($query_ds)) {
       $name_ds = $fetch_ds["name"];
       $url = $fetch_ds["url"];
     }
