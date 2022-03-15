@@ -12,7 +12,7 @@
   use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
   $conn = mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba", "heroku_3e0e4fe3001638d") or die ("Невозможно подключиться к серверу");
-  mysqli_query($conn, "SET NAMES cp1251");
+  mysqli_query($conn, "SET NAMES utf8");
 
   $spreadsheet = new Spreadsheet();
   
@@ -26,14 +26,14 @@
 
   $sheet -> getColumnDimension("A") -> setWidth(5);
   $sheet -> getColumnDimension("B") -> setWidth(15);
-  $sheet -> getColumnDimension("C") -> setWidth(15);
-  $sheet -> getColumnDimension("D") -> setWidth(18);
-  $sheet -> getColumnDimension("E") -> setWidth(30);
-  $sheet -> getColumnDimension("F") -> setWidth(15);
-  $sheet -> getColumnDimension("G") -> setWidth(15);
-  $sheet -> getColumnDimension("H") -> setWidth(50);
-  $sheet -> getColumnDimension("I") -> setWidth(18);
-  $sheet -> getColumnDimension("J") -> setWidth(18);
+  $sheet -> getColumnDimension("C") -> setWidth(20);
+  $sheet -> getColumnDimension("D") -> setWidth(15);
+  $sheet -> getColumnDimension("E") -> setWidth(20);
+  $sheet -> getColumnDimension("F") -> setWidth(20);
+  $sheet -> getColumnDimension("G") -> setWidth(20);
+  $sheet -> getColumnDimension("H") -> setWidth(20);
+  $sheet -> getColumnDimension("I") -> setWidth(20);
+  $sheet -> getColumnDimension("J") -> setWidth(20);
 
   $sheet -> SetCellValue("A2", "№");
   $sheet -> SetCellValue("B2", "Название");
