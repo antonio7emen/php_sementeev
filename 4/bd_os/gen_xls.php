@@ -18,11 +18,11 @@
   
   $sheet = $spreadsheet -> getActiveSheet();
 
-  $sheet -> setTitle("Заявки на ремонт");
+  $sheet -> setTitle("Операционные системы");
 
   $sheet -> SetCellValue("A1", "Операционные системы");
-  $sheet -> mergeCells("A1:I1");
-  $sheet -> getStyle("A1:I1") -> getAlignment() -> setHorizontal("center");
+  $sheet -> mergeCells("A1:J1");
+  $sheet -> getStyle("A1:J1") -> getAlignment() -> setHorizontal("center");
 
   $sheet -> getColumnDimension("A") -> setWidth(5);
   $sheet -> getColumnDimension("B") -> setWidth(15);
@@ -33,6 +33,7 @@
   $sheet -> getColumnDimension("G") -> setWidth(15);
   $sheet -> getColumnDimension("H") -> setWidth(50);
   $sheet -> getColumnDimension("I") -> setWidth(18);
+  $sheet -> getColumnDimension("J") -> setWidth(18);
 
   $sheet -> SetCellValue("A2", "№");
   $sheet -> SetCellValue("B2", "Название");

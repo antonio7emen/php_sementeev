@@ -7,13 +7,17 @@
   $conn = mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba", "heroku_3e0e4fe3001638d") or die ("Невозможно подключиться к серверу");
   mysqli_query($conn, "SET NAMES cp1251");
 
-  define('FPDF_FONTPATH',"fpdf/font/");
-  require("fpdf/fpdf.php");
+  define('FPDF_FONTPATH',"../../fpdf/font/");
+  require("../../fpdf/fpdf.php");
   
   $pdf = new FPDF();
   $pdf -> AddPage();
  
   $pdf -> AddFont("Arial", "", "arial.php");
+  $pdf -> SetFont("Arial", "", "18");
+
+  $pdf -> Cell(195, 10, "Операционные системы", 1, 1, "C");
+
   $pdf -> SetFont("Arial", "", "6");
 
   $pdf -> Cell(5, 5, "№", 1, 0, "C");
