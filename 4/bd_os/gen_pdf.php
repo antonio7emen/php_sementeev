@@ -58,8 +58,8 @@
     $pdf -> Cell(20, 5, $developer, 1, 0, "C");
     $pdf -> Cell(30, 5, $population, 1, 0, "C");
     $pdf -> Cell(20, 5, $key, 1, 0, "C");
-    $pdf -> Cell(25, 5, $date_in, 1, 0, "C");
-    $pdf -> Cell(20, 5, $date_out, 1, 0, "C");
+    $pdf -> Cell(25, 5, date("d.m.Y", strtotime($date_in)), 1, 0, "C");
+    $pdf -> Cell(20, 5, date("d.m.Y", strtotime($date_out)), 1, 0, "C");
     $pdf -> Cell(20, 5, $url, 1, 1, "C");
 }
 

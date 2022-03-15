@@ -85,8 +85,8 @@
   $query=mysqli_query($conn, "SELECT * FROM dk");
   while($fetch=mysqli_fetch_array($query)) {
    echo "<tr><td>" . $fetch["id"] . "</td>";
-   echo "<td>" . $fetch["date_in"] . "</td>";
-   echo "<td>" . $fetch["date_out"] . "</td>";
+   echo "<td>" . date("d.m.Y", strtotime($fetch["date_in"])) . "</td>";
+   echo "<td>" . date("d.m.Y", strtotime($fetch["date_out"])) . "</td>";
    echo "<td>" . $fetch["id_os"] . "</td>";
    echo "<td>" . $fetch["id_ds"] . "</td>";
    echo "<td>" . $fetch["price"] . "</td>";

@@ -27,10 +27,23 @@ print "<br>Дата приобретения: <input name='date_in' size='20' type='date'
 value='".$date_in."'>";
 print "<br>Дата окончания: <input name='date_out' size='20' type='date'
 value='".$date_out."'>";
-print "<br>id ОС: <input name='id_os' size='20' type='text'
-value='".$id_os."'>";
-print "<br>id Цифрового магазина: <input name='id_ds' size='20' type='text'
-value='".$id_ds."'>";
+
+print "<br>id ОС: <select name='id_os'>";
+$result=mysqli_query($conn, "SELECT * FROM os");
+foreach($result as $row) {
+  if($row["id"] == $id_os) echo "<option value='".$row["id"]."' selected>".$row["name"]." ".$row["model"]."</option>";
+  else echo "<option value='".$row["id"]."'>".$row["name"]." ".$row["model"]."</option>";
+  }
+echo "</select>";
+
+print "<br>id Цифрового магазина: <select name='id_ds'>";
+$result=mysqli_query($conn, "SELECT * FROM ds");
+foreach($result as $row) {
+  if($row["id"] == $id_ds) echo "<option value='".$row["id"]."' selected>".$row["name"]."</option>";
+  else echo "<option value='".$row["id"]."'>".$row["name"]."</option>";
+  }
+echo "</select>";
+
 print "<br>Стоимость, $: <input name='price' size='20' type='text'
 value='".$price."'>";
 print "<br>Ключ: <input name='key' size='20' type='text'
