@@ -11,16 +11,16 @@
   use PhpOffice\PhpSpreadsheet\Spreadsheet;
   use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
-  $conn = mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba", "heroku_3e0e4fe3001638d") or die ("Íåâîçìîæíî ïîäêëþ÷èòüñÿ ê ñåðâåðó");
+  $conn = mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba", "heroku_3e0e4fe3001638d") or die ("ÐÐµÐ²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ Ð¿Ð¾Ð´ÐºÐ»ÑŽÑ‡Ð¸Ñ‚ÑŒÑÑ Ðº ÑÐµÑ€Ð²ÐµÑ€Ñƒ");
   mysqli_query($conn, "SET NAMES cp1251");
 
   $spreadsheet = new Spreadsheet();
   
   $sheet = $spreadsheet -> getActiveSheet();
 
-  $sheet -> setTitle("Îïåðàöèîííûå ñèñòåìû");
+  $sheet -> setTitle("ÐžÐ¿ÐµÑ€Ð°Ñ†Ð¸Ð¾Ð½Ð½Ñ‹Ðµ ÑÐ¸ÑÑ‚ÐµÐ¼Ñ‹");
 
-  $sheet -> SetCellValue("A1", "Îïåðàöèîííûå ñèñòåìû");
+  $sheet -> SetCellValue("A1", "ÐžÐ¿ÐµÑ€Ð°Ñ†Ð¸Ð¾Ð½Ð½Ñ‹Ðµ ÑÐ¸ÑÑ‚ÐµÐ¼Ñ‹");
   $sheet -> mergeCells("A1:J1");
   $sheet -> getStyle("A1:J1") -> getAlignment() -> setHorizontal("center");
 
@@ -35,16 +35,16 @@
   $sheet -> getColumnDimension("I") -> setWidth(18);
   $sheet -> getColumnDimension("J") -> setWidth(18);
 
-  $sheet -> SetCellValue("A2", "¹");
-  $sheet -> SetCellValue("B2", "Íàçâàíèå");
-  $sheet -> SetCellValue("C2", "Òèï îáîðóäîâàíèÿ");
-  $sheet -> SetCellValue("D2", "Ðàçðÿäíîñòü");
-  $sheet -> SetCellValue("E2", "Ðàçðàáîò÷èê");
-  $sheet -> SetCellValue("F2", "Êîë-âî ïîëüçîâàòåëåé, ìëí.");
-  $sheet -> SetCellValue("G2", "Öèôðîâîé êëþ÷");
-  $sheet -> SetCellValue("H2", "Äàòà ïðèîáðåòåíèÿ");
-  $sheet -> SetCellValue("I2", "Äàòà îêîí÷àíèÿ");
-  $sheet -> SetCellValue("J2", "URL ìàãàçèíà");
+  $sheet -> SetCellValue("A2", "â„–");
+  $sheet -> SetCellValue("B2", "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ");
+  $sheet -> SetCellValue("C2", "Ð¢Ð¸Ð¿ Ð¾Ð±Ð¾Ñ€ÑƒÐ´Ð¾Ð²Ð°Ð½Ð¸Ñ");
+  $sheet -> SetCellValue("D2", "Ð Ð°Ð·Ñ€ÑÐ´Ð½Ð¾ÑÑ‚ÑŒ");
+  $sheet -> SetCellValue("E2", "Ð Ð°Ð·Ñ€Ð°Ð±Ð¾Ñ‚Ñ‡Ð¸Ðº");
+  $sheet -> SetCellValue("F2", "ÐšÐ¾Ð»-Ð²Ð¾ Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÐµÐ¹, Ð¼Ð»Ð½.");
+  $sheet -> SetCellValue("G2", "Ð¦Ð¸Ñ„Ñ€Ð¾Ð²Ð¾Ð¹ ÐºÐ»ÑŽÑ‡");
+  $sheet -> SetCellValue("H2", "Ð”Ð°Ñ‚Ð° Ð¿Ñ€Ð¸Ð¾Ð±Ñ€ÐµÑ‚ÐµÐ½Ð¸Ñ");
+  $sheet -> SetCellValue("I2", "Ð”Ð°Ñ‚Ð° Ð¾ÐºÐ¾Ð½Ñ‡Ð°Ð½Ð¸Ñ");
+  $sheet -> SetCellValue("J2", "URL Ð¼Ð°Ð³Ð°Ð·Ð¸Ð½Ð°");
 
   $query = mysqli_query($conn, "SELECT * FROM dk");
   for($i = 1; $fetch_dk = mysqli_fetch_array($query); $i++) {
