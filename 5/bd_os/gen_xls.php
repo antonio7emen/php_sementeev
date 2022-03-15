@@ -1,5 +1,3 @@
-<?php header('Content-Type: text/html; charset=windows-1251'); ?>
-
 <?php
   session_start();
   if(!$_SESSION["type"]) header("Location: .");
