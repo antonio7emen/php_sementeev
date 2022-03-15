@@ -3,6 +3,12 @@
 <html>
 <head> <title> Добавление новой записи </title> </head>
 <body>
+
+<?php
+ $conn = mysqli_connect("eu-cdbr-west-01.cleardb.com","b82a476b3b9e9d","0de723ba", "heroku_3e0e4fe3001638d") or die ("Невозможно подключиться к серверу");
+ mysqli_query($conn, "SET NAMES cp1251");
+?>
+
 <H2>Добавление новой записи:</H2>
 <form action="save_new_dk.php" metod="get">
 <br>Дата приобретения: <input name="date_in" size="20" type="date">
